@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Release"/>
+    <Units Count="8">
+      <Unit0>
+        <Filename Value="innosetupfilesgen.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="137"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="umainform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FMainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="29" Y="27"/>
+        <UsageCount Value="137"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="upickflags.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPickFlags"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="274"/>
+        <CursorPos X="87" Y="342"/>
+        <UsageCount Value="137"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="usetupfile.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="350"/>
+        <CursorPos X="50" Y="382"/>
+        <UsageCount Value="137"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="D:\lazarus\lcl\comctrls.pp"/>
+        <UnitName Value="ComCtrls"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="1622"/>
+        <CursorPos X="3" Y="1371"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="D:\lazarus\fpc\3.0.4\source\rtl\objpas\sysutils\filutilh.inc"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="111"/>
+        <CursorPos X="10" Y="150"/>
+        <UsageCount Value="65"/>
+        <Loaded Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="D:\lazarus\fpc\3.0.4\source\rtl\objpas\objpas.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="93"/>
+        <CursorPos X="16" Y="106"/>
+        <UsageCount Value="3"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="usetflags.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FSetFlags"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="53"/>
+        <CursorPos X="65" Y="14"/>
+        <UsageCount Value="37"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit7>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="28">
+      <Position1>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="344" TopLine="315"/>
+      </Position1>
+      <Position2>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="347" TopLine="318"/>
+      </Position2>
+      <Position3>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="348" TopLine="319"/>
+      </Position3>
+      <Position4>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="350" TopLine="321"/>
+      </Position4>
+      <Position5>
+        <Filename Value="usetupfile.pas"/>
+        <Caret Line="318" TopLine="300"/>
+      </Position5>
+      <Position6>
+        <Filename Value="usetupfile.pas"/>
+        <Caret Line="319" TopLine="300"/>
+      </Position6>
+      <Position7>
+        <Filename Value="usetupfile.pas"/>
+        <Caret Line="321" TopLine="300"/>
+      </Position7>
+      <Position8>
+        <Filename Value="usetupfile.pas"/>
+        <Caret Line="323" TopLine="300"/>
+      </Position8>
+      <Position9>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="350" TopLine="321"/>
+      </Position9>
+      <Position10>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="353" Column="50" TopLine="331"/>
+      </Position10>
+      <Position11>
+        <Filename Value="usetupfile.pas"/>
+        <Caret Line="51" Column="27" TopLine="34"/>
+      </Position11>
+      <Position12>
+        <Filename Value="usetupfile.pas"/>
+        <Caret Line="325" TopLine="316"/>
+      </Position12>
+      <Position13>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="296" TopLine="278"/>
+      </Position13>
+      <Position14>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="342" TopLine="323"/>
+      </Position14>
+      <Position15>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="350" Column="50" TopLine="323"/>
+      </Position15>
+      <Position16>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="342" TopLine="323"/>
+      </Position16>
+      <Position17>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="344" TopLine="323"/>
+      </Position17>
+      <Position18>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="277" Column="27" TopLine="268"/>
+      </Position18>
+      <Position19>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="340" Column="33" TopLine="77"/>
+      </Position19>
+      <Position20>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="342" TopLine="325"/>
+      </Position20>
+      <Position21>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="344" TopLine="325"/>
+      </Position21>
+      <Position22>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="345" TopLine="325"/>
+      </Position22>
+      <Position23>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="346" TopLine="325"/>
+      </Position23>
+      <Position24>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="350" TopLine="325"/>
+      </Position24>
+      <Position25>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="351" TopLine="325"/>
+      </Position25>
+      <Position26>
+        <Filename Value="upickflags.pas"/>
+        <Caret Line="353" TopLine="325"/>
+      </Position26>
+      <Position27>
+        <Filename Value="usetupfile.pas"/>
+        <Caret Line="323" Column="101" TopLine="311"/>
+      </Position27>
+      <Position28>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="183" Column="53" TopLine="177"/>
+      </Position28>
+      <Position29>
+        <Filename Value="usetupfile.pas"/>
+        <Caret Line="361" Column="41" TopLine="350"/>
+      </Position29>
+      <Position30>
+        <Filename Value="usetupfile.pas"/>
+        <Caret Line="179" Column="10" TopLine="161"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

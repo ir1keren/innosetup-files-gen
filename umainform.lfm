@@ -1,0 +1,198 @@
+object FMainForm: TFMainForm
+  Left = 544
+  Height = 492
+  Top = 119
+  Width = 773
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'InnoSetup Files Generator'
+  ClientHeight = 492
+  ClientWidth = 773
+  Position = poScreenCenter
+  LCLVersion = '2.0.2.0'
+  object Label1: TLabel
+    Left = 16
+    Height = 15
+    Top = 8
+    Width = 96
+    Caption = '&Directories to read'
+    FocusControl = DirectoryEdit1
+    ParentColor = False
+  end
+  object DirectoryEdit1: TDirectoryEdit
+    Left = 16
+    Height = 23
+    Top = 32
+    Width = 736
+    DialogTitle = 'Pick directory to read'
+    ShowHidden = False
+    ButtonCaption = 'Pick Directory'
+    ButtonWidth = 140
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 528
+    Height = 25
+    Top = 86
+    Width = 224
+    Caption = 'Scan Directory Now'
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+  object ListView1: TListView
+    Left = 16
+    Height = 312
+    Top = 128
+    Width = 744
+    Checkboxes = True
+    Columns = <    
+      item
+        Caption = 'Source'
+        MinWidth = 150
+        Width = 250
+      end    
+      item
+        Caption = 'Destination Dir'
+        MinWidth = 140
+        Width = 140
+      end    
+      item
+        Caption = 'Excluded Files'
+        MinWidth = 140
+        Width = 140
+      end    
+      item
+        Caption = 'Flags'
+        MinWidth = 140
+        Width = 140
+      end    
+      item
+        Caption = 'Attributes'
+        MinWidth = 140
+        Width = 140
+      end>
+    HideSelection = False
+    MultiSelect = True
+    ParentShowHint = False
+    ReadOnly = True
+    RowSelect = True
+    ShowHint = True
+    TabOrder = 4
+    ViewStyle = vsReport
+    OnDblClick = ListView1DblClick
+    OnItemChecked = ListView1ItemChecked
+    OnSelectItem = ListView1SelectItem
+  end
+  object Button2: TButton
+    Left = 16
+    Height = 25
+    Top = 453
+    Width = 139
+    Caption = 'Add File Item'
+    OnClick = Button2Click
+    TabOrder = 5
+  end
+  object Button3: TButton
+    Left = 171
+    Height = 25
+    Top = 453
+    Width = 141
+    Caption = 'Remove File Item(s)'
+    Enabled = False
+    OnClick = Button3Click
+    TabOrder = 6
+  end
+  object Button4: TButton
+    Left = 624
+    Height = 25
+    Top = 453
+    Width = 136
+    Caption = 'Save File'
+    OnClick = Button4Click
+    TabOrder = 7
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 15
+    Top = 64
+    Width = 117
+    Caption = 'Base dir of destination'
+    FocusControl = ComboBox1
+    ParentColor = False
+  end
+  object ComboBox1: TComboBox
+    Left = 16
+    Height = 23
+    Top = 88
+    Width = 296
+    ItemHeight = 15
+    ItemIndex = 0
+    Items.Strings = (
+      '{app}'
+      '{win}'
+      '{sys}'
+      '{sysnative}'
+      '{syswow64}'
+      '{sd}'
+      '{commonpf}'
+      '{commonpf32}'
+      '{commonpf64}'
+      '{commoncf}'
+      '{commoncf32}'
+      '{commoncf64}'
+      '{tmp}'
+      '{fonts}'
+      '{dao}'
+      '{dotnet11}'
+      '{dotnet20}'
+      '{dotnet2032}'
+      '{dotnet2064}'
+      '{dotnet40}'
+      '{dotnet4032}'
+      '{dotnet4064}'
+      '{group}'
+      '{localappdata}'
+      '{userappdata}'
+      '{commonappdata}'
+      '{usercf}'
+      '{userdesktop}'
+      '{commondesktop}'
+      '{userdocs}'
+      '{commondocs}'
+      '{userfavorites}'
+      '{userpf}'
+      '{userprograms}'
+      '{commonprograms}'
+      '{usersavedgames}'
+      '{usersendto}'
+      '{userstartmenu}'
+      '{commonstartmenu}'
+      '{userstartup}'
+      '{commonstartup}'
+      '{usertemplates}'
+      '{commontemplates}'
+    )
+    TabOrder = 1
+    Text = '{app}'
+  end
+  object Button5: TButton
+    Left = 320
+    Height = 25
+    Top = 86
+    Width = 152
+    Caption = 'Set Flags'
+    OnClick = Button5Click
+    ParentShowHint = False
+    TabOrder = 2
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.iss'
+    FileName = 'ApplicationFile'
+    Filter = 'InnoSetup Script file (*.iss)|*.iss|Other files (*.*)|*.*'
+    Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
+    left = 428
+    top = 381
+  end
+end
