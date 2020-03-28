@@ -39,6 +39,12 @@ type
 
   end;
 
+  TDirInfo=record
+    FullPath:string;
+    FilesCount:Cardinal;
+  end;
+  TDirInfos=array of TDirInfo;
+
 var
   FMainForm: TFMainForm;
 
@@ -47,34 +53,35 @@ uses usetupfile,upickflags,RegExpr,usetflags;
 
 var
   FFlags:TInnoFileFlags;
+  DirInfos:TDirInfos;
 {$R *.lfm}
 
 { TFMainForm }
 
 procedure TFMainForm.Button1Click(Sender: TObject);
 var
-  bSubDir:boolean;
   sfItem:TInnoSetupFile;
-  liItem:TListItem;
   sDir:string;
+  di:TDirInfo;
+  n:Cardinal;
 
-  procedure IterateDir(sDir,DestDir:string);
+  procedure ScanDir(sDir:string);
   var
-    srInfo : TSearchRec;
+    n:Cardinal;
+    srInfo:TSearchRec;
   begin
     if sDir[Length(sDir)]<>'\' then sDir:=sDir+'\';
 
+    n:=Length(DirInfos);
+    SetLength(DirInfos,n+1);
+    FillChar(DirInfos[n],SizeOf(DirInfos[n]),0);
+    DirInfos[n].FullPath:=sDir;
+
     if FindFirst(sDir+'*.*',faAnyFile and faDirectory,srInfo)=0 then begin
       repeat
-        if (srInfo.Name<>'.')and(srInfo.Name<>'..')and(DirectoryExists(sDir+srInfo.Name)) then begin
-          if not bSubDir then bSubDir:=True;
-
-          if DestDir[Length(DestDir)]<>'\' then DestDir:=DestDir+'\';
-
-          sfItem:=TInnoSetupFile.Create(sDir+srInfo.Name+'\*.*',DestDir+srInfo.Name);
-          sfItem.Flags:=FFlags;
-          liItem:=sfItem.ToListItem(ListView1.Items);
-          IterateDir(sDir+srInfo.Name,DestDir+srInfo.Name);
+        if (srInfo.Name<>'.')and(srInfo.Name<>'..') then begin
+           if DirectoryExists(sDir+srInfo.Name) then ScanDir(sDir+srInfo.Name)
+           else Inc(DirInfos[n].FilesCount);
         end;
       until FindNext(srInfo)<>0;
     end;
@@ -90,19 +97,30 @@ begin
     ListView1.Items.Delete(0);
   end;
 
-  bSubDir:=False;sDir:=Trim(DirectoryEdit1.Directory);
+  sDir:=Trim(DirectoryEdit1.Directory);
+  n:=Length(sDir);
 
-  if sDir[Length(sDir)]<>'\' then sDir:=sDir+'\';
+  if sDir[n]<>'\' then begin
+    sDir:=sDir+'\';
+    Inc(n);
+  end;
+
+  ScanDir(sDir);
+
+  if Length(DirInfos)<1 then Exit;
 
   ListView1.Items.BeginUpdate;
-  IterateDir(sDir,ComboBox1.Text);
-  sfItem:=TInnoSetupFile.Create(sDir+'*.*',ComboBox1.Text);
-  sfItem.Flags:=FFlags;
-  liItem:=sfItem.ToListItem(ListView1.Items);
 
-  if bSubDir then ListView1.Items.Move(liItem.Index,0);
+  for di in DirInfos do begin
+    if di.FilesCount<1 then continue;
+
+    sfItem:=TInnoSetupFile.Create(di.FullPath+'*.*',ComboBox1.Text+Copy(di.FullPath,n));
+    sfItem.Flags:=FFlags;
+    sfItem.ToListItem(ListView1.Items);
+  end;
 
   ListView1.Items.EndUpdate;
+  SetLength(DirInfos,0);
 end;
 
 procedure TFMainForm.Button2Click(Sender: TObject);

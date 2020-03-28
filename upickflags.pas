@@ -247,7 +247,7 @@ end;
 class procedure TFPickFlags.PickFlags(TheOwner: TFMainForm; IsCreateNew: boolean=False);
 var
   isSetup:TInnoSetupFile;
-  s,source,sDir:string;
+  s,sDir:string;
   sources,excludes:TStringList;
   flags:TInnoFileFlags;
   attrs:TFileAttribs;
@@ -267,8 +267,6 @@ begin
         sDir:=FPickFlags.DirectoryEdit1.Directory;
 
         if sDir[Length(sDir)]<>'\' then sDir:=sDir+'\';
-
-        source:=sDir+'*.*';
 
         if (FPickFlags.ListBox1.Count>0)and(FPickFlags.ListBox1.Enabled) then begin
           excludes:=TStringList.Create;
@@ -359,7 +357,7 @@ begin
   if Assigned(sources) then FreeAndNil(sources);
   if Assigned(excludes) then FreeAndNil(excludes);
 
-  source:='';s:='';
+  s:='';
   FreeAndNil(FPickFlags);
 end;
 
